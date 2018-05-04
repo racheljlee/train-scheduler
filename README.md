@@ -3,6 +3,7 @@
 For this project, we had to make a `Train Scheduler` which utilized Google's `Firebase` database platform and a javascript library called `Moment JS`, which allowed us to format time in different  ways and to be able to perform some basic algorithms, which was going to be needed to be able to calculate train arrival times.
 
 **HTML**
+
 For the Html/Css, I had to determine what parts of the site was going to be `static` vs `dynamic`. The jumbotron containing the heading, the main card body that was going to hold the information for train scheduling data and the input form were all going to be static elements. The only thing I really needed to worry about generating dynamically through jQuery were the table rows of newly inputted data from the form.
 
 **JAVASCRIPT**
@@ -26,6 +27,7 @@ Meanwhile, I also had to utilize `Moment JS` to calculate the minutes left befor
 Last but not least, I wanted to add buttons for each entry that would allow the user to be able to remove the entry after clicking the button. This is so that if the user makes a mistake when entering fresh data or simply doesn't need a row of data to be displayed anymore to be able to delete it. This was achieved through creating a button, and adding a class of `delete-train` and then giving it an attirbute of `data-entry-id` which had the value of `snapshot.key`. This would allow Firebase to delete the relevant data from the database and update the html document accordingly, but only when the delete button is clicked. Thus, another `.on("click")` function is necessary here to trigger the deletion of the entry from both the html document and Firebase.
 
 **CSS/Design**
+
 I also thought it would be fun to call the Train Scheduler something else other than "Train Scheduler," so I found an icon and had it rotated to make an 'x' shape so that I could use it to call my Train Scheduler "Train Trax." It's a pun on words because "trax" comes from the word "tracks," which can be a double entendre to include the imagery of "train tracks" but also to incorporate the action of "to track" which is the basic function of the website I just coded: to keep track of train schedules. It can also further fit the function of Firebase in that it also keeps tracks of any changes of newly added child elements, and updates accordingly.
 
 I also chose this nice, young, healthy green color because green is my favorite color and easy on the eyes.
