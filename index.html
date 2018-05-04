@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1>Train Tra<img src="./assets/images/tracks.png"></h1>
+                    <h6>Find out when your next boarding time is.</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        Current Train Schedule
+                    </div>
+                    <div class="card-body">
+                        <table class="table" id="trains">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Train Name</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency (min)</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            Add Train
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="trainNameInput">Train Name</label>
+                                    <input type="text" class="form-control" id="trainNameInput" aria-describedby="trainName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="destinationInput">Destination</label>
+                                    <input type="text" class="form-control" id="destinationInput" aria-describedby="destination">
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstTrainTime">First Train Time (HH:mm - military time)</label>
+                                    <input type="text" class="form-control" id="firstTrainInput" aria-describedby="trainTime">
+                                </div>
+                                <div class="form-group">
+                                    <label for="frequencyTime">Frequency Time (min)</label>
+                                    <input type="number" class="form-control" id="frequencyInput" aria-describedby="frequencyTime">
+                                </div>
+                                <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBKpmPBre639VcuU2l1Xw0P-WZFWC1xRHA",
+        authDomain: "train-scheduler-c0247.firebaseapp.com",
+        databaseURL: "https://train-scheduler-c0247.firebaseio.com",
+        projectId: "train-scheduler-c0247",
+        storageBucket: "train-scheduler-c0247.appspot.com",
+        messagingSenderId: "492494671027"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="./assets/javascript/app.js"></script>
+    
+</body>
+</html>

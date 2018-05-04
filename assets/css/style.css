@@ -1,0 +1,34 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background-image: url('../images/spiration-light.png');
+    background-attachment: fixed;
+}
+.jumbotron {
+    text-align: center;
+    background: #90EE90;
+}
+
+img {
+    height: 50px;
+    margin-bottom: 50px;
+    position: relative;
+    top: 20px;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+.card {
+    margin-bottom: 50px;
+}
+.card-header {
+    background: #90EE90;
+}
+table {
+    border-color: #fff;
+}
+
+.btn-danger {
+    height: 35px;
+    width: 35px;
+}
